@@ -1,0 +1,488 @@
+- acceptance_criteria: null
+  jira_id: OGB-1184
+  summary: As a customer I can select a product category from the navigation to view
+    a list of products from that category
+- acceptance_criteria:
+  - Given a customer has navigated to the select a collection slot screen, having
+    successfully searched and selected an available store they are navigated to the
+    book a collection section of the page. They are able to see and select available
+    timeslots by an active CTA. (ref designs)
+  jira_id: OGB-1150
+  summary: As a customer I can see and select a timeslot if it is available
+- acceptance_criteria:
+  - Given a customer has navigated to the select a collection slot screen, having
+    successfully searched for a store, the nearest stores that are available are presented
+    with an active CTA that can be selected to select that store (ref designs)
+  jira_id: OGB-1149
+  summary: 'As a customer I can see and select a store that is available '
+- acceptance_criteria:
+  - Given that a customer selects the product image (whether the products is in or
+    out of stock) they are navigated to the product detail page for that same product
+    and the information across the product listing tile and product detail page is
+    consistent
+  - Given that a customer selects the product name (whether the products is in or
+    out of stock) they are navigated to the product detail page for that same product
+    and the information across the product listing tile and product detail page is
+    consistent
+  jira_id: OGB-1146
+  summary: 'As a customer I want to be able to click on the image or product name
+    to find out more details on the product '
+- acceptance_criteria: null
+  jira_id: OGB-1087
+  summary: As a business I want to present a unique navigation during the place order
+    process that differs to the navigation when a customer is browsing
+- acceptance_criteria:
+  - Only for Step 1 and 2
+  jira_id: OGB-1086
+  summary: As a customer I want to be able to easily navigate back to my trolley(basket)
+    from the place order journey if I want to check the items in my order
+- acceptance_criteria:
+  - To confirm with legal exact requirements
+  jira_id: OGB-1085
+  summary: 'As a customer I can select to opt in to marketing communications when
+    I place my order '
+- acceptance_criteria:
+  - As per designs
+  - Order number
+  - Select collection time
+  - Select store and full address
+  - Selected collection date
+  - Order summary - to include (per SKU) product thumbnail image, product name, qty,
+    serving size, price per kg, range price of item
+  - Estimated order total (based on typical price)
+  - Deposit paid
+  - 'Note: Change collection slot, Amend order CTA''s and date order placed as seen
+    on wireframes are not on designs as we have agreed these are not required'
+  jira_id: OGB-1084
+  summary: As a business we would like to present the customer with details of their
+    order on the order confirmation screen
+- acceptance_criteria:
+  - Given a customer as selected to checkout from their basket and has successfully
+    proceed to step 1 of the place order journey the navigation displayed shows the
+    steps of the place order journey
+  - Step 1 - Book a collection slot
+  - "Step 2 - Pay \xA310 deposit"
+  - Step 3 - Order confirmation
+  - (The presentation of these is simplified for mobile)
+  - Given that a customer has selected their store and successfully proceed to step
+    2, the navigation updates to provide feedback to the customer and highlight that
+    they are now on step 2 (ref designs)
+  - Given that a customer has completed all the details for step 2 successfully and
+    have navigated to step 3 the navigation updates to provide feedback to the customer
+    and highlight that they are now on step 3.
+  jira_id: OGB-1079
+  summary: As a customer I want to know where I am in the place order journey
+- acceptance_criteria:
+  - "Given that  a customer has successfully reached step 2 of the payment process\
+    \ (Pay \xA310 deposit) they are presented with a payment page which includes a\
+    \ postcode field"
+  - Given that a customer has selected the postcode field they can enter alphabetic
+    and numeric characters only into the field(s), as well as spaces
+  - "Given that a customer has entered a postcode, completed all other required information\
+    \ and selected the CTA to pay the \xA310 deposit, if"
+  - a) the postcode entered does not follow the standard for all UK postcodes
+  - i.e.
+  - AN NAA M1 1AA
+  - ANN NAA M60 1NW
+  - AAN NAA CR2 6XH
+  - AANN NAA DN55 1PT
+  - ANA NAA W1A 1HQ
+  - AANA NAA EC1A 1BB
+  - b) a failure result is returned from TLG the customer is presented with a inline
+    validation message
+  - Given that a customer has successfully entered a postcode into the field on the
+    payment page, these are successfully submitted and captured so they can validated
+    by TLG to process the payment and a success result is returned to the website
+    trigging ordering confirmation functions
+  jira_id: OGB-1064
+  summary: 'As a customer I can enter a postcode into the payment page '
+- acceptance_criteria:
+  - "Given that  a customer has successfully reached step 2 of the payment process\
+    \ (Pay \xA310 deposit) they are presented with a payment page which includes a\
+    \ security field"
+  - Given that a customer has selected the security number field they can enter  numeric
+    characters only into the field(s), up to a max of 4 characters
+  - "Given that a customer has entered a security number, and completed all other\
+    \ required information and selected the CTA to pay the \xA310 deposit, if a failure\
+    \ result is returned from TLG the customer is presented with a inline validation\
+    \ message"
+  - Given that a customer has successfully entered a security into the field on the
+    payment page, these are successfully submitted so they can validated by TLG to
+    process the payment and a success result is returned to the website trigging ordering
+    confirmation functions
+  jira_id: OGB-1063
+  summary: 'As a customer I can enter the security code from my chosen payment card '
+- acceptance_criteria:
+  - Given that a customer has selected the mobile number field they are able to enter
+    numeric characters into the field
+  - Given that a customer has not entered a mobile number into the field they can
+    still proceed to place order if they have completed all other compulsory information
+  jira_id: OGB-1062
+  summary: As a customer I can enter a mobile number into the payment page form if
+    I wish, but this is not required
+- acceptance_criteria:
+  - "Given that  a customer has successfully reached step 2 of the payment process\
+    \ (Pay \xA310 deposit) they are presented with a payment page which an email address\
+    \ field"
+  - Given that a customer has selected the payment field they can enter alphabetic,
+    numeric and symbol characters into the field
+  - "Given that a customer has not followed the format xxxx@xxxxx.xxx on submission\
+    \ of the form (by selecting to submit \xA310 deposit payment) they are presented\
+    \ with a validation message"
+  - "Given that a customer has not entered any thing into the email address field,\
+    \ the CTA to submit \xA310 deposit payment is not active"
+  jira_id: OGB-1061
+  summary: As a customer I can enter my email address in the payment form page
+- acceptance_criteria:
+  - Given a customer has successfully navigated to the payment page and the content
+    has loaded, a start date field (2 fields  - month and year as per designs) is
+    present
+  - Given a customer selects the start date field (month) they are presented with
+    a drop down from 01 - 12
+  - Given that a customer selects the start date field (year) they are presented with
+    a drop down containing YYYY or YY (need to confirm with Eddie the requirements
+    from TLG)
+  - Given that a customer selects the start date field(s) they can select a month/year
+    from the list available to them
+  - Given that a customer has entered a start date (month/year) and all other required
+    details in to the form, and they are validated successfully the start date is
+    captured and submitted to TLG to process the payment
+  jira_id: OGB-1060
+  summary: As a Maestro customer, I can enter the start date of my payment card in
+    the payment form
+- acceptance_criteria: null
+  jira_id: OGB-988
+  summary: A customer can enter characters into the collection slot booking page search
+    field, the find a store CTA is active and can be selected to action the search
+- acceptance_criteria:
+  - Given that a customer has successfully opened the collection slot overlay if no
+    details are entered into the store search box the search CTA (magnifying glass
+    as per designs) is show in an inactive state and cannot be selected.
+  jira_id: OGB-985
+  summary: If a customer has not entered any content into search field the find a
+    store CTA is not active and cannot be selected to action the search
+- acceptance_criteria:
+  - Given the customer has selected the collection slot overlay search field they
+    can enter numeric and alphabetic characters into the field
+  - Given the customer enters  numeric or alphabetic characters into the collection
+    slot overlay search field they can select the find a store CTA  (it is displayed
+    as active)
+  - Given the customer enters  numeric or alphabetic characters into the collection
+    slot overlay search field if they have successfully  selected the find a store
+    CTA  (it is displayed as active) this submits the search entered into the field,
+    validates if results can be found and present the results back (no results or
+    nearest store results)
+  - Given a mobile customer has navigated to the book a collection slot mobile page
+    they can enter numeric and alphabetic characters into the search field in order
+    to enter a postcode and town, an alphabetic keyboard is presented as default
+  jira_id: OGB-984
+  summary: A customer can enter numeric and alphabetic characters into the collection
+    slot overlay search field, the find a store CTA is active and can be selected
+    to action the search
+- acceptance_criteria:
+  - Given that a customer has entered a character in the search store field they are
+    presented with clear icon (as per designs) to clear the field.
+  - Given that a customer taps or clicks the clear icon any content entered is deleted
+    and the customer can proceed to enter new details or chose to leave the page
+  jira_id: OGB-978
+  summary: 'As a customer  I am presented with a delete CTA in the search for a store
+    field so I can easily clear the field '
+- acceptance_criteria: null
+  jira_id: OGB-976
+  summary: As a business, if we are unable to match a customers store search to any
+    suitable store results page I want to present them with a customer friendly no
+    results page
+- acceptance_criteria:
+  - "Given that  a customer has successfully reached step 2 of the payment process\
+    \ (Pay \xA310 deposit) they are presented with a payment page which includes a\
+    \ first name and last name field"
+  - Given that a customer has selected the first name or last name field they can
+    enter alphabetic characters only into the field(s) - need to confirm max characters
+  - Given that a customer has successfully entered a first name and last name into
+    the fields on the payment page, these are submitted and captured so they can used
+    for
+  - a) Order reporting/management
+  - b) Email personalisation (TBC for MVP)
+  - Given that a mobile customer selects to enter a first name or last name by selecting
+    the field they are presented with an alphabetic keyboard
+  - "Given that a customer does not complete the first name and last name field the\
+    \ CTA to place the \xA310 deposit is not active"
+  - Given that a customer has entered and submitted the place order form, first name
+    and last name are captured and reflected in the reporting as one single field
+    (to align with RSS reports)
+  jira_id: OGB-911
+  summary: As a business I want to capture the customer's first and last name so it
+    aligns with RSS and allows us to personalise emails
+- acceptance_criteria:
+  - "Given that  a customer has successfully reached step 2 of the payment process\
+    \ (Pay \xA310 deposit) they are presented with a payment page which includes a\
+    \ name on card field"
+  - Given that a customer has selected the name on card field they can enter alphabetic
+    characters and spaces only into the field(s) - need to confirm max characters
+  - Given that a customer has successfully entered a name into the fields on the payment
+    page, these are submitted and captured in order for TLG to process the payment
+  - Given that a mobile customer selects to enter into the name on card field by selecting
+    the field they are presented with an alphabetic keyboard
+  - "Given that a customer does not complete the name on card field they CTA to pay\
+    \ the \xA310 deposit is not active"
+  jira_id: OGB-910
+  summary: As a customer I can enter the name on my payment card in the payment form
+- acceptance_criteria:
+  - "Given that  a customer has successfully reached step 2 of the payment process\
+    \ (Pay \xA310 deposit) they are presented with a payment page which includes a\
+    \ expiry date field"
+  - Given a customer selects the expiry date field (month) they are presented with
+    a drop down from 01 - 12
+  - Given that a customer selects the expiry date field (year) they are presented
+    with a drop down containing YYYY or YY (need to confirm with Eddie the requirements
+    from TLG)
+  - Given a mobile customer selects the expiry date field(s) I am provided with a
+    native date selection wheel to select month and year from (TBC exact native selector)
+  - "Given that a customer does not enter details in the expiry date field(s) as this\
+    \ is a compulsory field, I cannot proceed to place order (Pay \xA310 deposit CTA\
+    \ button state is inactive as per designs)"
+  - Given that a customer does not enter a valid expiry date (i.e the expiry date
+    has past, or does not match the card number) a fail message is received from TLG
+    and a validation message is presented to the customer
+  jira_id: OGB-909
+  summary: As a customer I can enter an expiry date for the payment card I wish to
+    pay with
+- acceptance_criteria:
+  - 'Note: This is MVP approach as agreed with Lulu and Tony'
+  - "Given that  a customer has successfully reached step 2 of the payment process\
+    \ (Pay \xA310 deposit ) they are presented with a payment page which includes\
+    \ a card type dropdown, not card is selected and the field displays that they\
+    \ should select a card type - 'Please select a card type'"
+  - "Given a customer does not select a payment card type the CTA to proceed to pay\
+    \ \xA310 deposit is not active"
+  - Given a customer does not select a payment card type that aligns with the the
+    card number they have entered, a fail messages is returned from TLG and they are
+    presented with a relevant inline validation message (as per designs)
+  - Give a customer selects the payment card field they are presented with a list
+    of the accepted payment cards for Christmas food to order (need to add list of
+    accepted cards from other story)
+  - Given a customer selects a payment card type from the drop down and submits all
+    other required details on the payment page,  the card type is successfully captured
+    and provided to the payment provider to process the payment
+  jira_id: OGB-908
+  summary: 'As a customer I can select a  payment card type from a drop down field '
+- acceptance_criteria:
+  - If a customer selects the terms and conditions link on the payment page they are
+    taken to a page containing the terms and conditions
+  - TBC with legal if we need the customer to select to confirm their acceptance (as
+    per designs)
+  jira_id: OGB-906
+  summary: As a customer I can view the term's and conditions at the point of payment
+- acceptance_criteria:
+  - "Given that a customer has not added \xA310 worth of product to their basket they\
+    \ are advised that their is a minimum spend and they cannot proceed to place order\
+    \ (CTA is inactive)"
+  - "Given that a customer has not added \xA310 worth of product to their basket they\
+    \ are advised that their is a minimum spend and they can select to continue shopping\
+    \ (CTA is active) and are taken to the homepage"
+  jira_id: OGB-902
+  summary: "As a customer I want to be advised if I have not met the \xA310 minimum\
+    \ spend when I view my basket "
+- acceptance_criteria: null
+  jira_id: OGB-773
+  summary: Create templates that return all of the data & the javascript to show/hide
+    elements in page.
+- acceptance_criteria:
+  - Given that a mobile customer has searched for a store and it has successfully
+    found matching results the list of the nearest 5 stores and the stores locations
+    on a non-interactive map are loaded below the book a slot search field
+  - Store location on the map are displayed with numbered bespoke map pins placed
+    on the map where the store is located, zoom is scaled to ensured the 5 store pins
+    can be seen on map
+  - Given that a mobile customer has searched for a store and it has unsuccessfully
+    been able to find any suitable results they are presented with a no results page.
+  jira_id: OGB-770
+  summary: As a mobile customer on the find a store page I can view a non interactive
+    map with pins showing the location of the nearest 5 stores
+- acceptance_criteria:
+  - If a customer has selected a store from the list/map view, if they proceed to
+    select a collection slot store (both selecting the time slot and then confirming
+    their selection) as a business we want to ensure availability is checked at these
+    points so as to avoid frustration later in the journey. If unavailability is returned
+  - 1. Given that a customer selects a time slot and no availability is now returned
+    (since the page last refreshed) for that time slot then the customer is presented
+    with a validation message and a CTA allowing them to return to the select a collection
+    slot view
+  - 2. Given that a customer selects their time slot and no availability is now returned
+    (since the page last refreshed) for that time slot and for the whole store (i.e
+    it was the last slot available at the whole store) the customer is presented with
+    a validation message and a CTA allowing them to return them to their store search
+    results
+  - 3. Given that store availability is no longer available when they select the CTA
+    to confirm their selection they are presented with a validation message advising
+    that the store is no longer available for collection and the CTA to change store.
+  jira_id: OGB-754
+  summary: ' If a customer selects to confirm a time and no availability is returned
+    when a customer the customer is presented with a validation message'
+- acceptance_criteria: null
+  jira_id: OGB-737
+  summary: Javascript updates book slot icon without page refresh when a slot is selected
+- acceptance_criteria:
+  - Given that a customer has selected a time slot - availability is checked and if
+    a positive result is returned they are presented with collection slot reserved
+    message
+  - Given that a customer has selected a time slot - they have been presented with
+    a positive collection slot reserved message they can return to the page they were
+    on when starting the store finder journey by selecting the relevant CTA
+  - Given that a customer has selected a time slot - they have been presented with
+    a positive collection slot reserved message they can change the time slot by selecting
+    the relevant CTA
+  jira_id: OGB-736
+  summary: If a customer selects to confirm their time slot, I am presented with a
+    confirmation on screen that my collection slot is booked
+- acceptance_criteria:
+  - Given a customer has navigated to the select a collection slot screen any time
+    slots that are unavailable (either because the store is closed at this time or
+    because they have reached capacity) an inactive button state will be shown. (Copy
+    TBC)
+  jira_id: OGB-735
+  summary: If a store is closed at a given time slot, it should be shown as unavailable
+    on the select a collection slot screen
+- acceptance_criteria:
+  - Given a customer has selected a store and navigated to the store details screen
+    for that store, if they select an alternative store (i.e. from the list view)
+    the previous store details collapse and the new selected stores information is
+    displayed (as per design)
+  jira_id: OGB-733
+  summary: 'As a customer if I change the store I have selected the content refreshes
+    to display the new store selections information and location on the map '
+- acceptance_criteria: null
+  jira_id: OGB-732
+  summary: AJAX handler for store details modal
+- acceptance_criteria:
+  - Given that a mobile customer selects the select a collection slot CTA they are
+    take to a mobile screen showing collection slots and a selectable tab to store
+    details
+  - Give that a mobile customer selects the tab to store details, the store details
+    relevant to that store are loaded into the page
+  - Given that a mobile customer selects the select a collection slot CTA they are
+    taken to a mobile screen showing collection slots, if they select one that is
+    available and then select the store details tab, if they then select the collect
+    slot tab, their slot selection is still selected, but not confirmed.
+  jira_id: OGB-731
+  summary: As a mobile customer I can tab between book a selection slot and detailed
+    store information screen
+- acceptance_criteria:
+  - Given that a customer selects one of the store location pins on a map view a pop
+    up (as per designs) is displayed
+  - Given that a customer has successfully navigated to the pop-up they are able to
+    close the pop up
+  - Given that a customer has successfully navigated to the pop-up they can select
+    to view store details and are navigated down to the store details section of the
+    page
+  - Given that a customer has successfully navigated to the pop-up they can select
+    to reserve a collection slot via the relevant CTA
+  - and be taken the the select a slot section on the page
+  jira_id: OGB-730
+  summary: As a customer if I select a store using the map pin I can see more details
+    and relevant  CTA's
+- acceptance_criteria:
+  - 1. Given that a customer has successfully completed a store search and selects
+    a store result in the store list view which has availability, this selects the
+    store choice for the customer and they can proceed to select a collection slot
+    by selecting the select a collection CTA
+  - '2. Given that a customer has successfully completed a store search and selects
+    a store result in the store list view the following details/cta''s are presented:'
+  - Number (based on proximity of store) i.e. 1. for the closest store
+  - Store name
+  - Store address (max 2 lines, truncated as necessary)
+  - Distance from search postcode/town in miles
+  - View store details
+  - Select a collection slot
+  - 3. Given that a customer selects a store result in the store list, if they select
+    another store result the previous selected store will no longer be shown as selected
+    and the new selected store will be registered as their store selection and will
+    be opened showing the store details relating to that store and the select a collection
+    slot CTA
+  jira_id: OGB-729
+  summary: As a customer if I select a store result from the list view (with availability)
+    this is registered as my store selection and I can see more details and relevant
+    CTA's
+- acceptance_criteria: null
+  jira_id: OGB-700
+  summary: As a mobile customer, I can select product categories via a persistant
+    drop down that is visible as I browse
+- acceptance_criteria:
+  - Ref OGB-694
+  jira_id: OGB-695
+  summary: As a business we want product size defaults to be displayed at listing
+    level, defaulting to the smallest product size
+- acceptance_criteria:
+  - Given that a mobile customer has selected a store and can see a view store details
+    CTA/link they can select it and are taken to a store details screen (tabbed content
+    as per designs)
+  jira_id: OGB-662
+  summary: 'As a mobile customer I can to view detailed store information from the
+    list view '
+- acceptance_criteria:
+  - Given that a customer has selected a store from the map view (excludes mobile)
+    and can see the store details CTA if the select it they are navigated to the full
+    store details
+  - Address
+  - Store Manager
+  - Phone number
+  - Opening hours
+  - Seasonal opening hours (when available on GOL)
+  - View all store details CTA (opens more details i.e. store facilities) - Not MVP
+  jira_id: OGB-658
+  summary: As a customer I can select to view detailed information within the page
+    from a map view of stores
+- acceptance_criteria:
+  - See also https://sainsburys.jiraoncloud.com/browse/OGB-729
+  - Given that a customer has selected a store and can see the store details CTA if
+    the select it they are navigated to the full store details
+  - Address
+  - Store Manager
+  - Phone number
+  - Opening hours
+  - Seasonal opening hours (when available on GOL)
+  - View all store details CTA (opens more details i.e. store facilities) - Not MVP
+  jira_id: OGB-657
+  summary: 'As a customer I can select to view detailed information within the page
+    from a list view '
+- acceptance_criteria:
+  - "Given that a customer has added over \xA310 worth of product to their basket\
+    \ they can proceed to the place order screen from their basket"
+  - Given that a customer has entered all the required detailed into the payment details
+    page they can proceed to place order by selected the CTA to submit the payment
+    form details
+  - Given that the customer has selected the CTA to submit the payment form details
+    and their details are successfully validated by TLG they receive a notification
+    on screen to confirm their order has been place
+  jira_id: OGB-335
+  summary: "A customer can proceed to payment and place an order if they have spent\
+    \ over \xA310 "
+- acceptance_criteria: null
+  jira_id: OGB-331
+  summary: As a customer I expect to be able to view detailed information on a participating
+    store
+- acceptance_criteria: null
+  jira_id: OGB-327
+  summary: As a customer, if I have navigated to a product detail page I expect to
+    be able to easily go back to my previous page
+- acceptance_criteria:
+  - "\xA310 min spend is required in order to place an order"
+  jira_id: OGB-325
+  summary: "As a business I want to set a minimum order spend of \xA310 to pre-order\
+    \ Christmas food to order online"
+- acceptance_criteria: null
+  jira_id: OGB-241
+  summary: "As a customer I want to be able to enter and submit the required details\
+    \ to pay my \xA310 deposit in order to pre order my chosen christmas food "
+- acceptance_criteria: null
+  jira_id: OGB-236
+  summary: 'As a customer I want to be able to search on the Christmas Food Order
+    website for my local participating Christmas Food Order store(s) and select it
+    before I browse '
+- acceptance_criteria:
+  - This just part of the place order journey rather than browse so ref acceptance
+    criteria for browse. (Ref 236)
+  jira_id: OGB-221
+  summary: 'As a customer, I want to be able to search on the Christmas Food Order
+    website for my local participating Christmas Food Order store(s) and select it
+    when I place my order '

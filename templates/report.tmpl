@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Acceptance Criteria Report</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <style>
+            body {
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>{{ issues|length }} Issues that are {{ status }} as of {{ updated_at }}</h2>
+        <table class="table table-condensed">
+            <tr>
+                <thead>
+                    <th>JIRA Number</th>
+                    <th>Summary</th>
+                    <th>Epic</th>
+                    <th>Acceptance Criteria</th>
+                </thead>
+            </tr>
+            <tr>
+                <tbody>
+                    {% for x in issues %}
+                    <tr {% if x.passed == True %}
+                            class='bg-success'
+                        {% endif %}
+                        {% if x.passed == False %}
+                            class='bg-danger'
+                        {% endif %}>
+                        <td><a href="https://sainsburys.jiraoncloud.com/browse/{{ x.key }}">{{ x.key }}</a></td>
+                        <td>{{ x.summary }}</td>
+                        <td>{{ x.epic }}</td>
+                        <td>
+                            {% if x.acceptance_criteria %}
+                            <ul>
+                                {% for s in x.acceptance_criteria %}
+                                    <li>{{ s }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                                None found
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}    
+                </tbody>
+            </tr>
+        </table>
+    </body>
+</html>

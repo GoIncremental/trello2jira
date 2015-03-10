@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20140910 17:31:15.357" generator="Robot 2.8.5 (Python 2.7.8 on linux2)">
+<suite source="/home/ben/src/github.com/rethought/soxmas/robot/store_locator_working.robot" id="s1" name="Store Locator Working">
+<kw type="setup" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5s</arg>
+</arguments>
+<status status="PASS" endtime="20140910 17:31:15.471" starttime="20140910 17:31:15.470"></status>
+</kw>
+<test id="s1-t1" name="OGB-999 - Testicles">
+<kw type="setup" name="resource.Start Browsing">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
+</arguments>
+<msg timestamp="20140910 17:31:15.472" level="INFO">Opening browser 'CHROME' to base url 'http://localhost:8000'</msg>
+<status status="PASS" endtime="20140910 17:31:18.989" starttime="20140910 17:31:15.472"></status>
+</kw>
+<status status="PASS" endtime="20140910 17:31:18.990" starttime="20140910 17:31:15.471"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${URL}/</arg>
+</arguments>
+<msg timestamp="20140910 17:31:18.990" level="INFO">Opening url 'http://localhost:8000/'</msg>
+<status status="PASS" endtime="20140910 17:31:19.586" starttime="20140910 17:31:18.990"></status>
+</kw>
+<kw type="teardown" name="resource.Stop Browsing">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${REMOTE_URL}' != ''</arg>
+<arg>Report Sauce status</arg>
+<arg>${SUITE_NAME} | ${TEST_NAME}</arg>
+<arg>${TEST_STATUS}</arg>
+<arg>${TEST_TAGS}</arg>
+<arg>${REMOTE_URL}</arg>
+</arguments>
+<status status="PASS" endtime="20140910 17:31:19.588" starttime="20140910 17:31:19.588"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20140910 17:31:20.147" starttime="20140910 17:31:19.589"></status>
+</kw>
+<status status="PASS" endtime="20140910 17:31:20.148" starttime="20140910 17:31:19.587"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20140910 17:31:20.149" critical="yes" starttime="20140910 17:31:15.471"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20140910 17:31:20.150" starttime="20140910 17:31:15.357"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Store Locator Working">Store Locator Working</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

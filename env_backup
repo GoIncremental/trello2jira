@@ -1,0 +1,3 @@
+source /home/ben/.pyenv/versions/trello2jira/bin/activate
+export JIRA_USER=ben.hughes
+export JIRA_PASSWORD=icbiatwt2
